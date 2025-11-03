@@ -4,7 +4,7 @@ from exp.exp_anomaly_prediction import Exp_Anomaly_Prediction
 import random
 import numpy as np
 
-fix_seed = 2025
+fix_seed = 2021
 random.seed(fix_seed)
 torch.manual_seed(fix_seed)
 np.random.seed(fix_seed)
@@ -49,9 +49,9 @@ def run_model(model):
 
     # Basic configuration
     parser.add_argument('--task_name', type=str, default='anomaly_prediction', help='Task name')
-    parser.add_argument('--is_training', type=int, default=0, help='Training mode: 1 for training, 0 for testing')
+    parser.add_argument('--is_training', type=int, default=1, help='Training mode: 1 for training, 0 for testing')
     parser.add_argument('--use_guide', type=bool, default=1, help='Whether to use guide model')
-    parser.add_argument('--train_guide', type=bool, default=0, help='Whether to train guide_model')
+    parser.add_argument('--train_guide', type=bool, default=1, help='Whether to train guide_model')
     parser.add_argument('--cat_train', type=bool, default=1, help='Whether to use cat_train')
     parser.add_argument('--des', type=str, default='Exp_0', help='Experiment description')
 
@@ -68,7 +68,7 @@ def run_model(model):
     parser.add_argument('--label_len', type=int, default=0)
     parser.add_argument('--step', type=int, default=1, help='Window moving step size')
     parser.add_argument('--batch_size', type=int, default=64, help='Training batch size')
-    parser.add_argument('--train_epochs', type=int, default=7, help='Number of training epochs')
+    parser.add_argument('--train_epochs', type=int, default=1, help='Number of training epochs')
 
     # Prediction model general configuration
     parser.add_argument('--d_model', type=int, default=32, help='Prediction frequency domain loss weight')
