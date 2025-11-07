@@ -1,9 +1,9 @@
-# TGA²F
+# TGAR
 
 **此代码是我们论文《一种面向未来时间序列异常预测的教师指导异常感知与重构框架》的官方PyTorch实现。**
 
 ## 介绍
-本文提出了一种教师指导的异常感知与重构框架（Teacher-Guided Anomaly-Aware and Reconstruction Framework，TGA²F），用于未来时间序列异常预测。该框架由异常感知预测模块（Anomaly-Aware Forecasting，AAF）和教师指导重构模块（Teacher-Guided Reconstruction，TGR）组成。两个模块协同作用，使模型能够在预测阶段捕捉异常征兆，并在检测阶段实现稳健的重构，从而实现对未来异常事件的前瞻性识别与高精度预测。
+本文提出了一种教师指导的异常感知与重构（Teacher-Guided Anomaly-Aware and Reconstruction Framework，TGAR）框架，用于未来时间序列异常预测。该框架由异常感知预测模块（Anomaly-Aware Forecasting，AAF）和教师指导重构模块（Teacher-Guided Reconstruction，TGR）组成。两个模块协同作用，使模型能够在预测阶段捕捉异常征兆，并在检测阶段实现稳健的重构，从而实现对未来异常事件的前瞻性识别与高精度预测。
 ![alt text](pic/TGA²F.png)
 
 ## 关键设计
@@ -37,7 +37,7 @@ python run.py --data MSL --data_path MSL.csv --c_in 55
 
 ## 结果
 
-在五个常用数据集上的综合实验表明，本文提出的TGA²F方法在绝大多数场景下显著优于现有模型，尤其在GECCO和SMAP数据集上分别取得了约20%和9%的性能提升。相比线性模型波动大、传统预测模型弱化异常信号的局限性，TGA²F方法通过教师模型的异常感知机制、MIDformer的双注意力架构及知识蒸馏技术，实现了对异常特征的多维度捕捉，显著提升了模型在检测性能、稳定性和泛化能力方面的综合表现。
+在五个常用数据集上的综合实验表明，本文提出的TGAR方法在绝大多数场景下显著优于现有模型，尤其在GECCO和SMAP数据集上分别取得了约20%和9%的性能提升。相比线性模型波动大、传统预测模型弱化异常信号的局限性，TGAR方法通过教师模型的异常感知机制、MIDformer的双注意力架构及知识蒸馏技术，实现了对异常特征的多维度捕捉，显著提升了模型在检测性能、稳定性和泛化能力方面的综合表现。
 
 
 ![alt text](pic/result.png)
