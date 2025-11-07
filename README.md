@@ -4,7 +4,7 @@
 
 ## 介绍
 本文提出了一种教师指导的异常感知与重构（Teacher-Guided Anomaly-Aware and Reconstruction Framework，TGAR）框架，用于未来时间序列异常预测。该框架由异常感知预测模块（Anomaly-Aware Forecasting，AAF）和教师指导重构模块（Teacher-Guided Reconstruction，TGR）组成。两个模块协同作用，使模型能够在预测阶段捕捉异常征兆，并在检测阶段实现稳健的重构，从而实现对未来异常事件的前瞻性识别与高精度预测。
-![alt text](pic/TGA²F.png)
+![alt text](pic/TGARF.png)
 
 ## 关键设计
 🌟 **异常感知预测**: 利用教师模型对未来序列的重构误差生成时间维度上的异常权重，从而引导预测模型关注潜在的异常区域，增强对异常动态的感知能力。
